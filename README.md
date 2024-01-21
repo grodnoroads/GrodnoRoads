@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="Icon" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" width="200" />
+    <img alt="Icon" src="app/android/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" width="200" />
 </div>
 
 <h2 align="center">
@@ -34,6 +34,7 @@ In case bug and suggestions, please create issue.
 
 Check dependency updates: `./gradlew dependencyUpdates`
 Run compose metrics: `./gradlew app:android:assembleRelease -PenableComposeCompilerReports=true` 
+Generate kmp buildconfig: `./gradlew :kmp:shared:components:generateBuildKonfig`
 
 Build ui-demo: `./gradlew app:ui-demo:assembleRelease`
 

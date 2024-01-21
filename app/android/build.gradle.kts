@@ -5,7 +5,6 @@ plugins {
     id("grodnoroads.compose")
     alias(libs.plugins.firebase.crashlytics)
     alias(libs.plugins.google.services)
-    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.secrets)
 }
 
@@ -55,6 +54,10 @@ android {
         buildConfig = true
     }
 
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -63,61 +66,25 @@ android {
 }
 
 dependencies {
-    implementation(projects.features.map.mapData)
-    implementation(projects.features.map.mapDomain)
-    implementation(projects.features.map.mapUi)
-
-    implementation(projects.features.settings)
-
-    implementation(projects.features.setting.alerts)
-    implementation(projects.features.setting.appearance)
-    implementation(projects.features.setting.changelog)
-    implementation(projects.features.setting.faq)
-    implementation(projects.features.setting.map)
-
-    implementation(projects.shared.appSettings)
-    implementation(projects.shared.appComponent)
+    implementation(projects.kmp.features.root)
+    implementation(projects.kmp.shared.crashlytics)
+    implementation(projects.kmp.shared.persistent)
+    implementation(projects.kmp.libraries.logger)
 
     implementation(projects.compose.foundation.core)
-    implementation(projects.compose.foundation.preview)
     implementation(projects.compose.foundation.theme)
-    implementation(projects.compose.foundation.uikit)
-
-    implementation(projects.compose.commonUi)
-
     implementation(projects.libraries.analytics)
-    implementation(projects.libraries.crashlytics)
-    implementation(projects.libraries.extensions)
-    implementation(projects.libraries.location)
     implementation(projects.libraries.resources)
 
+    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.material3.window)
-    implementation(libs.androidx.compose.material.icons)
-    implementation(libs.androidx.compose.runtime)
-    implementation(libs.androidx.compose.ui)
-
-    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.material3.windowsize)
     implementation(libs.androidx.core.splashscreen)
-
-    implementation(libs.coroutines)
-
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.database)
-    implementation(libs.firebase.firestore)
-
-    implementation(platform(libs.koin.bom))
-    implementation(libs.koin.android)
-
-    implementation(libs.decompose)
-    implementation(libs.decompose.compose.jetpack)
-    implementation(libs.immutable.collections)
     implementation(libs.google.maps)
     implementation(libs.google.material)
-    implementation(libs.mvikotlin.extensions)
-    implementation(libs.mvikotlin.main)
-    implementation(libs.mvikotlin)
+
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }
 
 secrets {

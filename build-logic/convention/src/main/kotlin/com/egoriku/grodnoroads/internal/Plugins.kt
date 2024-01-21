@@ -8,5 +8,8 @@ internal val Project.applicationPluginId
 internal val Project.kotlinPluginId
     get() = libs.plugins.kotlin.android.get().pluginId
 
+internal val Project.kotlinMultiplatformPluginId
+    get() = libs.plugins.kotlin.multiplatform.get().pluginId
+
 internal val Project.libraryPluginId
     get() = libs.plugins.android.library.get().pluginId

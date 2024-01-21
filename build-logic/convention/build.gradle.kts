@@ -17,6 +17,10 @@ gradlePlugin {
             id = "grodnoroads.library"
             implementationClass = "AndroidLibraryPlugin"
         }
+        register("grodnoroads.kmplibrary") {
+            id = "grodnoroads.kmplibrary"
+            implementationClass = "AndroidKmpLibraryPlugin"
+        }
         register("grodnoroads.compose") {
             id = "grodnoroads.compose"
             implementationClass = "AndroidComposePlugin"

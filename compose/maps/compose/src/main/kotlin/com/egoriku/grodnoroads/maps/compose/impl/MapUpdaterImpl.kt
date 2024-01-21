@@ -6,10 +6,6 @@ import com.egoriku.grodnoroads.maps.compose.MapUpdater
 import com.egoriku.grodnoroads.maps.compose.decorator.MapPaddingDecorator
 import com.egoriku.grodnoroads.maps.compose.extension.zoom
 import com.egoriku.grodnoroads.maps.compose.impl.decorator.MapPaddingDecoratorImpl
-import com.egoriku.grodnoroads.maps.core.extension.computeOffset
-import com.egoriku.grodnoroads.maps.core.extension.distanceTo
-import com.egoriku.grodnoroads.maps.core.extension.headingTo
-import com.egoriku.grodnoroads.maps.core.extension.roundDistanceTo
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -18,6 +14,8 @@ import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.maps.android.SphericalUtil
+import com.google.maps.android.SphericalUtil.computeOffset
 import com.google.maps.android.ktx.markerClickEvents
 import com.google.maps.android.ktx.model.cameraPosition
 import com.google.maps.android.ktx.model.markerOptions
@@ -28,6 +26,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlin.math.roundToInt
 
 internal class MapUpdaterImpl(
     private val mapView: MapView,
@@ -222,3 +221,10 @@ internal class MapUpdaterImpl(
         }
     )
 }
+
+infix fun LatLng.roundDistanceTo(latLng: LatLng): Int = computeDistance(this, latLng).roundToInt()
+infix fun LatLng.distanceTo(latLng: LatLng): Double = computeDistance(this, latLng)
+infix fun LatLng.headingTo(latLng: LatLng): Double = computeHeading(this, latLng)
+
+private fun computeHeading(from: LatLng, to: LatLng) = SphericalUtil.computeHeading(from, to)
+private fun computeDistance(from: LatLng, to: LatLng) = SphericalUtil.computeDistanceBetween(from, to)

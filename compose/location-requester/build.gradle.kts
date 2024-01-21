@@ -16,7 +16,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.runtime)
 
-    implementation(libs.coroutines.playservices)
+    implementation(libs.kotlin.coroutines.playservices)
 
     implementation(libs.play.services.location)
 }

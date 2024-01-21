@@ -8,7 +8,7 @@ android {
 }
 
 dependencies {
-    implementation(projects.compose.foundation.theme)
+    api(projects.compose.foundation.theme)
 
     implementation(libs.androidx.compose.material3)
 

@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A9CD2162B3870D60010592F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9CD2152B3870D60010592F /* GoogleService-Info.plist */; };
+		6A9CD2192B38B7F60010592F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CD2182B38B7F60010592F /* LoadingView.swift */; };
+		6A9CD21D2B38C1700010592F /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CD21C2B38C1700010592F /* SettingsHeaderView.swift */; };
+		6A9CD21F2B38C2F60010592F /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CD21E2B38C2F60010592F /* SettingsItem.swift */; };
+		CE14848F2B3CB4A4009B048A /* FirebaseBinaries in Frameworks */ = {isa = PBXBuildFile; productRef = CE14848E2B3CB4A4009B048A /* FirebaseBinaries */; };
+		CE243F5F2B4754E400B3845C /* RoundButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243F5E2B4754E400B3845C /* RoundButtonView.swift */; };
+		CE243F612B475A4200B3845C /* SettingsRoundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243F602B475A4200B3845C /* SettingsRoundItem.swift */; };
+		CE46B71C2B325EBE00493502 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46B71B2B325EBE00493502 /* MapView.swift */; };
+		CE46B71E2B325ED600493502 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46B71D2B325ED600493502 /* AppSettings.swift */; };
+		CE52F3052B1CF3B200D81762 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52F3042B1CF3B200D81762 /* MainApp.swift */; };
+		CE52F3092B1CF3B400D81762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE52F3082B1CF3B400D81762 /* Assets.xcassets */; };
+		CE52F30C2B1CF3B400D81762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE52F30B2B1CF3B400D81762 /* Preview Assets.xcassets */; };
+		CE6627472B362C0E00799BC2 /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6627462B362C0E00799BC2 /* AlertsView.swift */; };
+		CE6627492B3648D300799BC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6627482B3648D300799BC2 /* AppDelegate.swift */; };
+		CE66274B2B36491100799BC2 /* ComponentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66274A2B36491100799BC2 /* ComponentContext.swift */; };
+		CE66274D2B371BCB00799BC2 /* MapSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66274C2B371BCB00799BC2 /* MapSettingsView.swift */; };
+		CE6627922B38CB6700799BC2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627912B38CB6700799BC2 /* Accelerate.framework */; };
+		CE6627942B38CB6E00799BC2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627932B38CB6E00799BC2 /* CoreData.framework */; };
+		CE6627962B38CB7600799BC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627952B38CB7600799BC2 /* CoreGraphics.framework */; };
+		CE6627982B38CB8A00799BC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627972B38CB8A00799BC2 /* CoreImage.framework */; };
+		CE66279A2B38CB9100799BC2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627992B38CB9100799BC2 /* CoreLocation.framework */; };
+		CE66279C2B38CB9600799BC2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66279B2B38CB9600799BC2 /* CoreTelephony.framework */; };
+		CE66279E2B38CB9E00799BC2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66279D2B38CB9E00799BC2 /* CoreText.framework */; };
+		CE6627A02B38CBA400799BC2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE66279F2B38CBA400799BC2 /* GLKit.framework */; };
+		CE6627A22B38CBAC00799BC2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627A12B38CBAB00799BC2 /* ImageIO.framework */; };
+		CE6627A42B38CBB900799BC2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627A32B38CBB900799BC2 /* libc++.tbd */; };
+		CE6627A62B38CBC200799BC2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627A52B38CBC200799BC2 /* libz.tbd */; };
+		CE6627A82B38CBC800799BC2 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627A72B38CBC800799BC2 /* Metal.framework */; };
+		CE6627AA2B38CBCF00799BC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627A92B38CBCF00799BC2 /* OpenGLES.framework */; };
+		CE6627AC2B38CBDC00799BC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627AB2B38CBDC00799BC2 /* QuartzCore.framework */; };
+		CE6627AE2B38CBE300799BC2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627AD2B38CBE300799BC2 /* SystemConfiguration.framework */; };
+		CE6627B02B38CBEC00799BC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6627AF2B38CBEC00799BC2 /* UIKit.framework */; };
+		CE6627B22B38CF4500799BC2 /* secrets.properties in Resources */ = {isa = PBXBuildFile; fileRef = CE6627B12B38CF4500799BC2 /* secrets.properties */; };
+		CE6627D32B3A127E00799BC2 /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6627D12B3A127E00799BC2 /* MapViewControllerBridge.swift */; };
+		CE6627D42B3A127E00799BC2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6627D22B3A127E00799BC2 /* MapViewController.swift */; };
+		CEA322392B33A1B90039329B /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA322382B33A1B90039329B /* FaqView.swift */; };
+		CEA924C72B2FA95B0086E744 /* StateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924C22B2FA95B0086E744 /* StateValue.swift */; };
+		CEA924C82B2FA95B0086E744 /* MutableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924C32B2FA95B0086E744 /* MutableValue.swift */; };
+		CEA924C92B2FA95B0086E744 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924C42B2FA95B0086E744 /* StackView.swift */; };
+		CEA924CA2B2FA95B0086E744 /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924C52B2FA95B0086E744 /* ObservableValue.swift */; };
+		CEA924CB2B2FA95B0086E744 /* SimpleChildStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924C62B2FA95B0086E744 /* SimpleChildStack.swift */; };
+		CEA924CD2B2FB5D00086E744 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924CC2B2FB5D00086E744 /* RootView.swift */; };
+		CEA924CF2B2FB61A0086E744 /* MainFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924CE2B2FB61A0086E744 /* MainFlowView.swift */; };
+		CEA924D12B2FB7A20086E744 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924D02B2FB7A20086E744 /* OnboardingView.swift */; };
+		CEA924D42B30CCC50086E744 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924D32B30CCC50086E744 /* AppearanceView.swift */; };
+		CEA924D62B30CD310086E744 /* ChangelogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924D52B30CD310086E744 /* ChangelogView.swift */; };
+		CEA924D82B30CD520086E744 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA924D72B30CD520086E744 /* TabsView.swift */; };
+		CEC83F3A2B3BA599009ACA8B /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83F392B3BA599009ACA8B /* GoogleMaps */; };
+		CEC83F3C2B3BA599009ACA8B /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83F3B2B3BA599009ACA8B /* GoogleMapsBase */; };
+		CEC83F3E2B3BA599009ACA8B /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83F3D2B3BA599009ACA8B /* GoogleMapsCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A9CD2152B3870D60010592F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A9CD2182B38B7F60010592F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		6A9CD21C2B38C1700010592F /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		6A9CD21E2B38C2F60010592F /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		CE243F5E2B4754E400B3845C /* RoundButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonView.swift; sourceTree = "<group>"; };
+		CE243F602B475A4200B3845C /* SettingsRoundItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRoundItem.swift; sourceTree = "<group>"; };
+		CE46B71B2B325EBE00493502 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CE46B71D2B325ED600493502 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		CE52F3012B1CF3B200D81762 /* grodno-roads-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grodno-roads-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE52F3042B1CF3B200D81762 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		CE52F3082B1CF3B400D81762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE52F30B2B1CF3B400D81762 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE6627462B362C0E00799BC2 /* AlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsView.swift; sourceTree = "<group>"; };
+		CE6627482B3648D300799BC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE66274A2B36491100799BC2 /* ComponentContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentContext.swift; sourceTree = "<group>"; };
+		CE66274C2B371BCB00799BC2 /* MapSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSettingsView.swift; sourceTree = "<group>"; };
+		CE6627912B38CB6700799BC2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CE6627932B38CB6E00799BC2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE6627952B38CB7600799BC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE6627972B38CB8A00799BC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		CE6627992B38CB9100799BC2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE66279B2B38CB9600799BC2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CE66279D2B38CB9E00799BC2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		CE66279F2B38CBA400799BC2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		CE6627A12B38CBAB00799BC2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		CE6627A32B38CBB900799BC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		CE6627A52B38CBC200799BC2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CE6627A72B38CBC800799BC2 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		CE6627A92B38CBCF00799BC2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CE6627AB2B38CBDC00799BC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE6627AD2B38CBE300799BC2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE6627AF2B38CBEC00799BC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE6627B12B38CF4500799BC2 /* secrets.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = secrets.properties; path = ../../../../secrets.properties; sourceTree = "<group>"; };
+		CE6627D12B3A127E00799BC2 /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		CE6627D22B3A127E00799BC2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CEA322382B33A1B90039329B /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
+		CEA924C22B2FA95B0086E744 /* StateValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateValue.swift; sourceTree = "<group>"; };
+		CEA924C32B2FA95B0086E744 /* MutableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableValue.swift; sourceTree = "<group>"; };
+		CEA924C42B2FA95B0086E744 /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		CEA924C52B2FA95B0086E744 /* ObservableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		CEA924C62B2FA95B0086E744 /* SimpleChildStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleChildStack.swift; sourceTree = "<group>"; };
+		CEA924CC2B2FB5D00086E744 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		CEA924CE2B2FB61A0086E744 /* MainFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowView.swift; sourceTree = "<group>"; };
+		CEA924D02B2FB7A20086E744 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		CEA924D32B30CCC50086E744 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		CEA924D52B30CD310086E744 /* ChangelogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogView.swift; sourceTree = "<group>"; };
+		CEA924D72B30CD520086E744 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE52F2FE2B1CF3B200D81762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6627B02B38CBEC00799BC2 /* UIKit.framework in Frameworks */,
+				CE6627AE2B38CBE300799BC2 /* SystemConfiguration.framework in Frameworks */,
+				CE6627AC2B38CBDC00799BC2 /* QuartzCore.framework in Frameworks */,
+				CE6627AA2B38CBCF00799BC2 /* OpenGLES.framework in Frameworks */,
+				CEC83F3E2B3BA599009ACA8B /* GoogleMapsCore in Frameworks */,
+				CE6627A82B38CBC800799BC2 /* Metal.framework in Frameworks */,
+				CE6627A62B38CBC200799BC2 /* libz.tbd in Frameworks */,
+				CE6627A42B38CBB900799BC2 /* libc++.tbd in Frameworks */,
+				CE6627A22B38CBAC00799BC2 /* ImageIO.framework in Frameworks */,
+				CE6627A02B38CBA400799BC2 /* GLKit.framework in Frameworks */,
+				CE14848F2B3CB4A4009B048A /* FirebaseBinaries in Frameworks */,
+				CE66279E2B38CB9E00799BC2 /* CoreText.framework in Frameworks */,
+				CE66279C2B38CB9600799BC2 /* CoreTelephony.framework in Frameworks */,
+				CE66279A2B38CB9100799BC2 /* CoreLocation.framework in Frameworks */,
+				CE6627982B38CB8A00799BC2 /* CoreImage.framework in Frameworks */,
+				CEC83F3A2B3BA599009ACA8B /* GoogleMaps in Frameworks */,
+				CEC83F3C2B3BA599009ACA8B /* GoogleMapsBase in Frameworks */,
+				CE6627962B38CB7600799BC2 /* CoreGraphics.framework in Frameworks */,
+				CE6627942B38CB6E00799BC2 /* CoreData.framework in Frameworks */,
+				CE6627922B38CB6700799BC2 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A9CD2172B38B7DF0010592F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6A9CD2182B38B7F60010592F /* LoadingView.swift */,
+				CE243F5E2B4754E400B3845C /* RoundButtonView.swift */,
+				6A9CD21C2B38C1700010592F /* SettingsHeaderView.swift */,
+				6A9CD21E2B38C2F60010592F /* SettingsItem.swift */,
+				CE243F602B475A4200B3845C /* SettingsRoundItem.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		6AFE155A2B30CA2D003016DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6627AF2B38CBEC00799BC2 /* UIKit.framework */,
+				CE6627AD2B38CBE300799BC2 /* SystemConfiguration.framework */,
+				CE6627AB2B38CBDC00799BC2 /* QuartzCore.framework */,
+				CE6627A92B38CBCF00799BC2 /* OpenGLES.framework */,
+				CE6627A72B38CBC800799BC2 /* Metal.framework */,
+				CE6627A52B38CBC200799BC2 /* libz.tbd */,
+				CE6627A32B38CBB900799BC2 /* libc++.tbd */,
+				CE6627A12B38CBAB00799BC2 /* ImageIO.framework */,
+				CE66279F2B38CBA400799BC2 /* GLKit.framework */,
+				CE66279D2B38CB9E00799BC2 /* CoreText.framework */,
+				CE66279B2B38CB9600799BC2 /* CoreTelephony.framework */,
+				CE6627992B38CB9100799BC2 /* CoreLocation.framework */,
+				CE6627972B38CB8A00799BC2 /* CoreImage.framework */,
+				CE6627952B38CB7600799BC2 /* CoreGraphics.framework */,
+				CE6627932B38CB6E00799BC2 /* CoreData.framework */,
+				CE6627912B38CB6700799BC2 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE243F5D2B474E8D00B3845C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CE46B71B2B325EBE00493502 /* MapView.swift */,
+				CE6627D22B3A127E00799BC2 /* MapViewController.swift */,
+				CE6627D12B3A127E00799BC2 /* MapViewControllerBridge.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		CE46B71A2B325EAB00493502 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				CE243F5D2B474E8D00B3845C /* Map */,
+				CE46B71F2B325EDC00493502 /* Settings */,
+				CEA924D72B30CD520086E744 /* TabsView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		CE46B71F2B325EDC00493502 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE6627462B362C0E00799BC2 /* AlertsView.swift */,
+				CEA924D32B30CCC50086E744 /* AppearanceView.swift */,
+				CE46B71D2B325ED600493502 /* AppSettings.swift */,
+				CEA924D52B30CD310086E744 /* ChangelogView.swift */,
+				CEA322382B33A1B90039329B /* FaqView.swift */,
+				CE66274C2B371BCB00799BC2 /* MapSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE46B7202B325F4A00493502 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE52F3082B1CF3B400D81762 /* Assets.xcassets */,
+				6A9CD2152B3870D60010592F /* GoogleService-Info.plist */,
+				CE6627B12B38CF4500799BC2 /* secrets.properties */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE46B7212B325FB000493502 /* OnboardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				CEA924D02B2FB7A20086E744 /* OnboardingView.swift */,
+			);
+			path = OnboardingFlow;
+			sourceTree = "<group>";
+		};
+		CE52F2F82B1CF3B200D81762 = {
+			isa = PBXGroup;
+			children = (
+				CE52F3032B1CF3B200D81762 /* grodno-roads-ios */,
+				CE52F3022B1CF3B200D81762 /* Products */,
+				6AFE155A2B30CA2D003016DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE52F3022B1CF3B200D81762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE52F3012B1CF3B200D81762 /* grodno-roads-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE52F3032B1CF3B200D81762 /* grodno-roads-ios */ = {
+			isa = PBXGroup;
+			children = (
+				CEA924C12B2FA95B0086E744 /* DecomposeHelpers */,
+				CEA924D22B30CCB80086E744 /* MainFlow */,
+				CE46B7212B325FB000493502 /* OnboardingFlow */,
+				CE52F30A2B1CF3B400D81762 /* Preview Content */,
+				CE46B7202B325F4A00493502 /* Resources */,
+				6A9CD2172B38B7DF0010592F /* UIKit */,
+				CE6627482B3648D300799BC2 /* AppDelegate.swift */,
+				CE52F3042B1CF3B200D81762 /* MainApp.swift */,
+				CEA924CC2B2FB5D00086E744 /* RootView.swift */,
+			);
+			path = "grodno-roads-ios";
+			sourceTree = "<group>";
+		};
+		CE52F30A2B1CF3B400D81762 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE52F30B2B1CF3B400D81762 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEA924C12B2FA95B0086E744 /* DecomposeHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE66274A2B36491100799BC2 /* ComponentContext.swift */,
+				CEA924C32B2FA95B0086E744 /* MutableValue.swift */,
+				CEA924C52B2FA95B0086E744 /* ObservableValue.swift */,
+				CEA924C62B2FA95B0086E744 /* SimpleChildStack.swift */,
+				CEA924C42B2FA95B0086E744 /* StackView.swift */,
+				CEA924C22B2FA95B0086E744 /* StateValue.swift */,
+			);
+			path = DecomposeHelpers;
+			sourceTree = "<group>";
+		};
+		CEA924D22B30CCB80086E744 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				CE46B71A2B325EAB00493502 /* Tabs */,
+				CEA924CE2B2FB61A0086E744 /* MainFlowView.swift */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE52F3002B1CF3B200D81762 /* grodno-roads-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE52F30F2B1CF3B400D81762 /* Build configuration list for PBXNativeTarget "grodno-roads-ios" */;
+			buildPhases = (
+				CE5AE8FE2B1CF4C3001B3C60 /* ShellScript */,
+				CE52F2FD2B1CF3B200D81762 /* Sources */,
+				CE52F2FE2B1CF3B200D81762 /* Frameworks */,
+				CE52F2FF2B1CF3B200D81762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "grodno-roads-ios";
+			packageProductDependencies = (
+				CEC83F392B3BA599009ACA8B /* GoogleMaps */,
+				CEC83F3B2B3BA599009ACA8B /* GoogleMapsBase */,
+				CEC83F3D2B3BA599009ACA8B /* GoogleMapsCore */,
+				CE14848E2B3CB4A4009B048A /* FirebaseBinaries */,
+			);
+			productName = "grodno-roads-ios";
+			productReference = CE52F3012B1CF3B200D81762 /* grodno-roads-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE52F2F92B1CF3B200D81762 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CE52F3002B1CF3B200D81762 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CE52F2FC2B1CF3B200D81762 /* Build configuration list for PBXProject "grodno-roads-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE52F2F82B1CF3B200D81762;
+			packageReferences = (
+				CEC83F382B3BA599009ACA8B /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				CE14848D2B3CB4A4009B048A /* XCRemoteSwiftPackageReference "GRFirebaseBinaries" */,
+			);
+			productRefGroup = CE52F3022B1CF3B200D81762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE52F3002B1CF3B200D81762 /* grodno-roads-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE52F2FF2B1CF3B200D81762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE52F30C2B1CF3B400D81762 /* Preview Assets.xcassets in Resources */,
+				6A9CD2162B3870D60010592F /* GoogleService-Info.plist in Resources */,
+				CE52F3092B1CF3B400D81762 /* Assets.xcassets in Resources */,
+				CE6627B22B38CF4500799BC2 /* secrets.properties in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE5AE8FE2B1CF4C3001B3C60 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/../..\"\n./gradlew :kmp:features:root:embedAndSignAppleFrameworkForXcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE52F2FD2B1CF3B200D81762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE243F612B475A4200B3845C /* SettingsRoundItem.swift in Sources */,
+				CEA924D42B30CCC50086E744 /* AppearanceView.swift in Sources */,
+				CE6627472B362C0E00799BC2 /* AlertsView.swift in Sources */,
+				CEA924CD2B2FB5D00086E744 /* RootView.swift in Sources */,
+				6A9CD21F2B38C2F60010592F /* SettingsItem.swift in Sources */,
+				CEA924D62B30CD310086E744 /* ChangelogView.swift in Sources */,
+				CEA924D82B30CD520086E744 /* TabsView.swift in Sources */,
+				CEA924CF2B2FB61A0086E744 /* MainFlowView.swift in Sources */,
+				CE6627D42B3A127E00799BC2 /* MapViewController.swift in Sources */,
+				CEA924C82B2FA95B0086E744 /* MutableValue.swift in Sources */,
+				CEA322392B33A1B90039329B /* FaqView.swift in Sources */,
+				CEA924D12B2FB7A20086E744 /* OnboardingView.swift in Sources */,
+				6A9CD21D2B38C1700010592F /* SettingsHeaderView.swift in Sources */,
+				CE66274B2B36491100799BC2 /* ComponentContext.swift in Sources */,
+				CE66274D2B371BCB00799BC2 /* MapSettingsView.swift in Sources */,
+				CE46B71C2B325EBE00493502 /* MapView.swift in Sources */,
+				CE46B71E2B325ED600493502 /* AppSettings.swift in Sources */,
+				6A9CD2192B38B7F60010592F /* LoadingView.swift in Sources */,
+				CEA924CA2B2FA95B0086E744 /* ObservableValue.swift in Sources */,
+				CEA924C72B2FA95B0086E744 /* StateValue.swift in Sources */,
+				CE52F3052B1CF3B200D81762 /* MainApp.swift in Sources */,
+				CEA924CB2B2FA95B0086E744 /* SimpleChildStack.swift in Sources */,
+				CE6627D32B3A127E00799BC2 /* MapViewControllerBridge.swift in Sources */,
+				CE6627492B3648D300799BC2 /* AppDelegate.swift in Sources */,
+				CEA924C92B2FA95B0086E744 /* StackView.swift in Sources */,
+				CE243F5F2B4754E400B3845C /* RoundButtonView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CE52F30D2B1CF3B400D81762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE52F30E2B1CF3B400D81762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE52F3102B1CF3B400D81762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"grodno-roads-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 9DVPR48GRE;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../kmp/features/root/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Root,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.egoriku.grodnoroads;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE52F3112B1CF3B400D81762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"grodno-roads-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 9DVPR48GRE;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../kmp/features/root/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Root,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.egoriku.grodnoroads;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE52F2FC2B1CF3B200D81762 /* Build configuration list for PBXProject "grodno-roads-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE52F30D2B1CF3B400D81762 /* Debug */,
+				CE52F30E2B1CF3B400D81762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE52F30F2B1CF3B400D81762 /* Build configuration list for PBXNativeTarget "grodno-roads-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE52F3102B1CF3B400D81762 /* Debug */,
+				CE52F3112B1CF3B400D81762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE14848D2B3CB4A4009B048A /* XCRemoteSwiftPackageReference "GRFirebaseBinaries" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grodnoroads/GRFirebaseBinaries.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		CEC83F382B3BA599009ACA8B /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE14848E2B3CB4A4009B048A /* FirebaseBinaries */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE14848D2B3CB4A4009B048A /* XCRemoteSwiftPackageReference "GRFirebaseBinaries" */;
+			productName = FirebaseBinaries;
+		};
+		CEC83F392B3BA599009ACA8B /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC83F382B3BA599009ACA8B /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		CEC83F3B2B3BA599009ACA8B /* GoogleMapsBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC83F382B3BA599009ACA8B /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsBase;
+		};
+		CEC83F3D2B3BA599009ACA8B /* GoogleMapsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC83F382B3BA599009ACA8B /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE52F2F92B1CF3B200D81762 /* Project object */;
+}

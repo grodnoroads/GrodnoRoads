@@ -35,7 +35,7 @@ class AndroidLibraryPlugin : Plugin<Project> {
             }
 
             kotlinOptions {
-                freeCompilerArgs = listOf("-Xcontext-receivers")
+                freeCompilerArgs += "-Xcontext-receivers"
                 languageVersion = KotlinVersion.KOTLIN_1_9.version
             }
 

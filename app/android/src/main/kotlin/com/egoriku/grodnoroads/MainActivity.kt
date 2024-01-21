@@ -8,20 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.arkivanov.decompose.defaultComponentContext
-import com.egoriku.grodnoroads.extensions.common.StateData
 import com.egoriku.grodnoroads.foundation.core.LocalActivity
+import com.egoriku.grodnoroads.foundation.core.LocalWindowSizeClass
 import com.egoriku.grodnoroads.foundation.theme.GrodnoRoadsM3Theme
-import com.egoriku.grodnoroads.screen.root.RoadsRootComponent
-import com.egoriku.grodnoroads.screen.root.RoadsRootComponentImpl
-import com.egoriku.grodnoroads.screen.root.RootContent
-import com.egoriku.grodnoroads.shared.appsettings.types.appearance.Theme
-import com.egoriku.grodnoroads.util.LocalWindowSizeClass
+import com.egoriku.grodnoroads.root.domain.buildRootComponent
+import com.egoriku.grodnoroads.root.screen.RootContent
+import com.egoriku.grodnoroads.shared.persistent.appearance.Theme
 
 // Don't use ComponentActivity, due to it breaks language change
 class MainActivity : AppCompatActivity() {
@@ -29,50 +24,49 @@ class MainActivity : AppCompatActivity() {
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         val splash = installSplashScreen()
-
         splash.setKeepOnScreenCondition { true }
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
-        val root: RoadsRootComponent = RoadsRootComponentImpl(defaultComponentContext())
-
+        val root = buildRootComponent(defaultComponentContext())
         setContent {
-            val themeState by root.themeState.collectAsState(initial = StateData.Idle)
+            val theme by root.theme.collectAsState()
 
-            when (val theme = themeState) {
-                is StateData.Loaded -> {
+            LaunchedEffect(theme) {
+                if (theme != null) {
                     splash.setKeepOnScreenCondition { false }
-                    val darkTheme = when (theme.data) {
-                        Theme.System -> isSystemInDarkTheme()
-                        Theme.Dark -> true
-                        Theme.Light -> false
-                    }
+                }
+            }
 
-                    DisposableEffect(darkTheme) {
-                        enableEdgeToEdge(
-                            statusBarStyle = SystemBarStyle.auto(
-                                lightScrim = android.graphics.Color.TRANSPARENT,
-                                darkScrim = android.graphics.Color.TRANSPARENT,
-                            ) { darkTheme },
-                            navigationBarStyle = SystemBarStyle.auto(
-                                lightScrim = android.graphics.Color.TRANSPARENT,
-                                darkScrim = android.graphics.Color.TRANSPARENT,
-                            ) { darkTheme },
-                        )
-                        onDispose {}
-                    }
-
-                    GrodnoRoadsM3Theme(darkTheme) {
-                        CompositionLocalProvider(
-                            LocalWindowSizeClass provides calculateWindowSizeClass(this),
-                            LocalActivity provides this,
-                        ) {
-                            RootContent(rootComponent = root)
-                        }
-                    }
+            theme?.let {
+                val isDarkTheme = when (it) {
+                    Theme.System -> isSystemInDarkTheme()
+                    Theme.Dark -> true
+                    Theme.Light -> false
                 }
 
-                else -> {}
+                DisposableEffect(isDarkTheme) {
+                    enableEdgeToEdge(
+                        statusBarStyle = SystemBarStyle.auto(
+                            lightScrim = android.graphics.Color.TRANSPARENT,
+                            darkScrim = android.graphics.Color.TRANSPARENT,
+                        ) { isDarkTheme },
+                        navigationBarStyle = SystemBarStyle.auto(
+                            lightScrim = android.graphics.Color.TRANSPARENT,
+                            darkScrim = android.graphics.Color.TRANSPARENT,
+                        ) { isDarkTheme },
+                    )
+                    onDispose {}
+                }
+
+                GrodnoRoadsM3Theme(isDarkTheme) {
+                    CompositionLocalProvider(
+                        LocalWindowSizeClass provides calculateWindowSizeClass(this),
+                        LocalActivity provides this,
+                    ) {
+                        RootContent(root)
+                    }
+                }
             }
         }
     }

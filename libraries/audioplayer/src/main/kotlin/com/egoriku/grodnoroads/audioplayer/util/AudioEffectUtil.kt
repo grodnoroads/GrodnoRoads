@@ -1,7 +1,7 @@
 package com.egoriku.grodnoroads.audioplayer.util
 
 import android.media.audiofx.AudioEffect
-import com.egoriku.grodnoroads.extensions.logD
+import com.egoriku.grodnoroads.logger.logD
 
 internal object AudioEffectUtil {
 
