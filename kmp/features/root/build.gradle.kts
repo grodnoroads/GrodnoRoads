@@ -6,6 +6,7 @@ plugins {
     id("grodnoroads.kmplibrary")
     id("grodnoroads.compose")
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.moko.resources)
 }
 
 android {
@@ -17,6 +18,7 @@ kotlin {
     setupIosStaticFramework(name = "root") {
         export(libs.decompose)
         export(libs.essenty.lifecycle)
+        export(libs.moko.resources)
 
         export(projects.kmp.features.appSettings)
         export(projects.kmp.features.guidance)
@@ -52,6 +54,7 @@ kotlin {
             api(projects.kmp.libraries.coroutines)
             api(projects.kmp.libraries.location)
             implementation(projects.kmp.libraries.datastore)
+            implementation(projects.kmp.libraries.resources)
 
             compileOnly(libs.compose.stable.marker)
             api(libs.decompose)
@@ -62,6 +65,7 @@ kotlin {
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
 
+            api(libs.moko.resources)
             implementation(libs.mvikotlin)
             implementation(libs.mvikotlin.main)
         }

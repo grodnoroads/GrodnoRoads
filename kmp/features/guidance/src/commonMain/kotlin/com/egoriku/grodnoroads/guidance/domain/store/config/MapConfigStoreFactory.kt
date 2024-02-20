@@ -10,6 +10,7 @@ import com.arkivanov.mvikotlin.extensions.coroutines.coroutineExecutorFactory
 import com.egoriku.grodnoroads.guidance.domain.model.AppMode
 import com.egoriku.grodnoroads.guidance.domain.model.MapInternalConfig
 import com.egoriku.grodnoroads.guidance.domain.model.ReportType
+import com.egoriku.grodnoroads.guidance.domain.repository.CityAreasRepository
 import com.egoriku.grodnoroads.guidance.domain.store.config.MapConfigStore.Intent
 import com.egoriku.grodnoroads.guidance.domain.store.config.MapConfigStore.Intent.*
 import com.egoriku.grodnoroads.guidance.domain.store.config.MapConfigStore.StoreState
@@ -28,10 +29,12 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 
 internal class MapConfigStoreFactory(
     private val storeFactory: StoreFactory,
-    private val dataStore: DataStore<Preferences>
+    private val dataStore: DataStore<Preferences>,
+    private val cityAreasRepository: CityAreasRepository
 ) {
 
     private sealed interface Message {
@@ -87,6 +90,10 @@ internal class MapConfigStoreFactory(
                         .distinctUntilChanged()
                         .onEach { dispatch(OnMapConfigInternal(it)) }
                         .launchIn(this)
+
+                    launch {
+                        cityAreasRepository.load()
+                    }
                 }
                 onIntent<CheckLocation> {
                     val latLng = it.latLng

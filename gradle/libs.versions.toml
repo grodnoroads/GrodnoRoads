@@ -3,10 +3,11 @@ compileSdk = "34"
 minSdk = "23" # Android 6.0
 targetSdk = "34"
 
-agp = "8.2.1"
+agp = "8.2.2"
 compose-compiler = "1.5.8"
 decompose = "2.2.2"
 kotlin = "1.9.22"
+moko-resources = "0.24.0-alpha-4"
 mvikotlin = "3.3.0"
 
 [libraries]
@@ -48,7 +49,7 @@ dev-gitlive-firebase-firestore = "dev.gitlive:firebase-firestore:1.11.1"
 
 essenty-lifecycle = "com.arkivanov.essenty:lifecycle:1.3.0"
 
-firebase-bom = "com.google.firebase:firebase-bom:32.7.0"
+firebase-bom = "com.google.firebase:firebase-bom:32.7.2"
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 
 google-maps = "com.google.maps.android:maps-ktx:5.0.0"
@@ -64,13 +65,17 @@ kotlin-collections = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7"
 kotlin-coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
 kotlin-coroutines-playservices = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3"
 kotlin-datetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.5.0"
+kotlin-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2"
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+
+moko-resources = { module = "dev.icerock.moko:resources", version.ref = "moko-resources" }
+moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resources" }
 
 mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mvikotlin" }
 mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlin" }
 mvikotlin-extensions = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
 
-play-services-location = "com.google.android.gms:play-services-location:21.0.1"
+play-services-location = "com.google.android.gms:play-services-location:21.1.0"
 play-services-maps = "com.google.android.gms:play-services-maps:18.2.0"
 
 [plugins]
@@ -78,9 +83,10 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 buildkonfig = { id = "com.codingfeline.buildkonfig", version = "0.15.1" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version = "2.9.9" }
-google-services = { id = "com.google.gms.google-services", version = "4.4.0" }
-gradle-dependency-check = { id = "com.github.ben-manes.versions", version = "0.50.0" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.1" }
+gradle-dependency-check = { id = "com.github.ben-manes.versions", version = "0.51.0" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+moko-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-resources" }
 secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version = "2.0.1" }

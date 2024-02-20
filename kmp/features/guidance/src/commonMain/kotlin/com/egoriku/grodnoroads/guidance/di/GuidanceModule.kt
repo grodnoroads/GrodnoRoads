@@ -17,6 +17,7 @@ val guidanceModule = module {
     factoryOf(::MediumSpeedCameraRepositoryImpl) { bind<MediumSpeedCameraRepository>() }
     factoryOf(::MobileCameraRepositoryImpl) { bind<MobileCameraRepository>() }
     factoryOf(::ReportsRepositoryImpl) { bind<ReportsRepository>() }
+    factoryOf(::CityAreasRepositoryImpl) { bind<CityAreasRepository>() }
 
     factory {
         MapEventsStoreFactory(
@@ -42,7 +43,8 @@ val guidanceModule = module {
     factory {
         MapConfigStoreFactory(
             storeFactory = get(),
-            dataStore = get()
+            dataStore = get(),
+            cityAreasRepository = get()
         ).create()
     }
 

@@ -312,6 +312,7 @@
 				CE52F2FD2B1CF3B200D81762 /* Sources */,
 				CE52F2FE2B1CF3B200D81762 /* Frameworks */,
 				CE52F2FF2B1CF3B200D81762 /* Resources */,
+				6A540C8C2B711A130064299D /* Configure moko-resources */,
 			);
 			buildRules = (
 			);
@@ -380,6 +381,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6A540C8C2B711A130064299D /* Configure moko-resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Configure moko-resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n\"$SRCROOT/../../gradlew\" -p \"$SRCROOT/../../\" :kmp:features:root:copyFrameworkResourcesToApp \\\n    -Pmoko.resources.PLATFORM=\"$PLATFORM_NAME\" \\\n    -Pmoko.resources.CONFIGURATION=\"$CONFIGURATION\" \\\n    -Pmoko.resources.ARCHS=\"$ARCHS\" \\\n    -Pmoko.resources.BUILT_PRODUCTS_DIR=\"$BUILT_PRODUCTS_DIR\" \\\n    -Pmoko.resources.CONTENTS_FOLDER_PATH=\"$CONTENTS_FOLDER_PATH\" \n";
+		};
 		CE5AE8FE2B1CF4C3001B3C60 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;

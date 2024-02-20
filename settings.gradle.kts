@@ -58,6 +58,7 @@ include(":kmp:libraries:datastore")
 include(":kmp:libraries:extensions")
 include(":kmp:libraries:location")
 include(":kmp:libraries:logger")
+include(":kmp:libraries:resources")
 include(":kmp:libraries:uuid")
 
 include(":kmp:shared:components")
